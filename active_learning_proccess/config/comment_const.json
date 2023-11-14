@@ -1,0 +1,26 @@
+{
+    "num_iteration": 0,
+    "service_name": "Constructividad_classifier",
+    "num_samples": 100,
+    "model_type": "roberta",
+    "model_name": "PlanTL-GOB-ES/roberta-base-bne",
+    "wandb_project": "comment_const_active_learning",
+    "classes": 2,
+    "best_result_config": "",
+    "group": "experiment_",
+    "init": false,
+    "is_training": true,
+    "is_evaluate": true,
+    "use_cuda": true,
+    "train_file": "/data/Comment_const_1/train.tsv",
+    "test_file": "/data/Comment_const_1/test.tsv",
+    "query_strategy": "lc",
+    "output_model_dir": "Comment_const_1",
+    "label": "CONST",
+    "filter_label": "",
+    "filter_label_value": "",
+    "map_label": {
+        "sí": 0,
+        "no": 1
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "num_iteration": 0,
+    "num_samples": 100,
+    "model_type": "roberta",
+    "model_name": "PlanTL-GOB-ES/roberta-base-bne",
+    "wandb_project": "comment_active_learning",
+    "inception_project": 11,
+    "classes": 4,
+    "best_result_config": "",
+    "group": "experiment_",
+    "init": false,
+    "is_training": true,
+    "is_evaluate": true,
+    "use_cuda": true,
+    "train_file": "/data/Comment_1/train.tsv",
+    "test_file": "/data/Comment_1/test.tsv",
+    "unlabelled_file": "/data/Comment_1/unlabelled_v1.tsv",
+    "query_strategy": "rs",
+    "output_dir": "/data/Comment_1/annotation_file",
+    "output_model_dir": "Comment_1",
+    "is_xmi": false,
+    "label": "TOXICIDAD",
+    "filter_label": "",
+    "filter_label_value": "",
+    "map_label": {
+        "1. No tóxico": 1,
+        "2. Ligeramente tóxico": 2,
+        "3. Tóxico": 3,
+        "4. Muy tóxico": 4
+    },
+    "dependent_layers":[
+        {
+            "layer": "webanno.custom.Comentario_toxico_constructivo",
+            "dependencies": [
+                "comment_const"
+            ]
+        }],
+    "typesystem": "/active_learning_proccess/config/comment_TypeSystem.xml"
+}

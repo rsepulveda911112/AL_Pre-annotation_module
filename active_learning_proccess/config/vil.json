@@ -1,0 +1,44 @@
+{
+    "num_iteration": 0,
+    "num_samples": 100,
+    "model_type": "roberta",
+    "model_name": "PlanTL-GOB-ES/roberta-base-bne",
+    "wandb_project": "vil_active_learning",
+    "inception_project": 10,
+    "classes": 2,
+    "best_result_config": "",
+    "group": "experiment_",
+    "init": false,
+    "is_training": true,
+    "is_evaluate": true,
+    "use_cuda": true,
+    "train_file": "/data/VIL_1/VIL_train.tsv",
+    "test_file": "/data/VIL_1/VIL_test.tsv",
+    "unlabelled_file": "/data/VIL_1/tuits_unlabelled_clean.tsv",
+    "query_strategy": "rs",
+    "output_dir": "/data/VIL_1/annotation_file",
+    "output_model_dir": "VIL_1",
+    "is_xmi": false,
+    "label": "label",
+    "filter_label": "",
+    "filter_label_value": "",
+    "map_label": {
+        "NOVIOLENTO": 0,
+        "VIOLENTO": 1
+    },
+    "dependent_layers": [
+        {
+            "layer": "webanno.custom.Violencia",
+            "dependencies": [
+                "vil_grado"
+            ]
+        },
+        {
+            "layer": "webanno.custom.Insulto",
+            "dependencies": [
+                "vil_insulto"
+            ]
+        }
+    ],
+    "typesystem": "/active_learning_proccess/config/vil_TypeSystem.xml"
+}

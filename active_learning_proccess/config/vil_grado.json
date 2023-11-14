@@ -1,0 +1,26 @@
+{
+    "num_iteration": 4,
+    "service_name": "twitter_grado_classifier",
+    "model_type": "roberta",
+    "model_name": "PlanTL-GOB-ES/roberta-base-bne",
+    "wandb_project": "vil_active_learning",
+    "classes": 2,
+    "best_result_config": "",
+    "group": "experiment_llldpilj",
+    "init": false,
+    "is_training": true,
+    "is_evaluate": true,
+    "use_cuda": true,
+    "train_file": "/data/VIL_grado_1/VIL_train.tsv",
+    "test_file": "/data/VIL_grado_1/VIL_test.tsv",
+    "query_strategy": "lc",
+    "output_model_dir": "VIL_grado_1",
+    "label": "grado",
+    "filter_label": "label",
+    "filter_label_value": "VIOLENTO",
+    "map_label": {
+        "MODERADO": 1,
+        "GRAVE": 0
+    },
+    "id": "llldpilj"
+}

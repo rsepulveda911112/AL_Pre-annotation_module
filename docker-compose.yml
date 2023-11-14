@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  active_learning:
+    restart: always
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8100:8100"
+    command: gunicorn -w 1 -b 0.0.0.0:8100 -t 3600 wsgi:app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]

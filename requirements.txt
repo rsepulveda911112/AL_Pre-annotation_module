@@ -1,0 +1,11 @@
+diskcache
+torch
+transformers
+gunicorn
+flask
+simpletransformers
+pandas
+small_text
+dkpro-cassis
+spacy
+pycaprio
